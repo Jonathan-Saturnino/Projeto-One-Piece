@@ -1,0 +1,66 @@
+@media (max-width:769px) {
+    main::after {
+        /* background-color: red; */
+
+        background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0.00) 65%) no-repeat;
+
+        width: 100vw;
+
+    }
+    main .personagem .imagem {
+        height: 85%;
+    }
+
+    .conteudo {
+        justify-content: flex-end;
+        left: 0;
+        top: -20%;
+        max-width: 100vw;
+        padding: 30px;
+    }
+    .conteudo .nome-personagem {
+        max-width: 500px;
+
+    }
+    .botoes {
+        flex-direction: row;
+        align-items: flex-end;
+        width: 100%;
+        padding: 30px;
+        
+    }
+    .botoes .botao img {
+        max-width: 60px;
+    }   
+
+}
+
+@media (max-width:425px) {
+    main .personagem .imagem{
+        height: auto;
+    }
+    .logo{
+        width: 170px;
+        height: 75px;
+    }
+    .conteudo {
+        top: -30%;
+    }
+    .conteudo .nome-personagem{
+        font-size: 24px;
+    }
+    .botoes {
+        padding: 20px;
+        top: -20%
+    }
+    .botoes .botao img {
+        max-width: 50px;
+
+    }
+
+
+
+}
+
+/*Usando Media Queries  "@media":
+Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas no CSS3, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.*/

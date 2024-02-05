@@ -1,0 +1,12 @@
+/* resentando os estilos padrões do navegador */
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; /* inclui o preenchimento e a borda na largura e altura total de um elemento. */
+}
+
+ul {
+    list-style: none;
+
+}

@@ -1,0 +1,107 @@
+body {
+    background-color: black;
+    overflow: hidden; /* esconder tudo que estiver transbordando para fora do body, isso vai empedir a rolagem vertical*/
+}
+main::after{
+    /* content: "🐱‍👤🐱‍👤🐱‍👤";  emogi inserido com teclas de atalho "windows + .(ponto)", tratase de um pseudo elemento inserido após o elemento "main" utilizando o "::after" */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: blueviolet; */
+    min-height: 100vh;
+    min-width: 80vh;
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+    /* para montar essa função de degrade pode-se fazer na mão ou usar um site pra gerar o degrade em css por exempleo o site "https://www.cssgradient.io"*/
+
+
+
+} 
+main .personagem {
+    display: none; /* ocultando os personagens */
+    height: 100vh; /* vh é "viewport height" altura da tela dispositivo utilizado  */
+}
+
+
+main .personagem.selecionado {
+    display: block;
+    /* exibindo o personagem luffy com a classe personagem e classe selecionado */
+}
+
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* mantem as dimenções da imagem e cobre o elemento, para evitar a distorção das imagens devido ao "viewport height" em 100% na classe personagem*/
+}
+
+.conteudo {
+    /* background-color: orange; */
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; /* vh é "viewport height" altura da tela dispositivo utilizado  */
+    max-width: 380px;
+     z-index: 1; /* movendo conteudo para frente no sentido do eixo z, para ficar acima do degrade */
+}
+
+.conteudo .nome-personagem {
+    /* background-color: green; */
+    color: white;
+    font-family: "Secular One";
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+    color: white;
+    font-family: "Rubik";
+    line-height: 24px; /* espaçamento entre as linhas*/
+
+}
+
+.conteudo .logo {
+    /* background-color: aquamarine; */
+    background-image: url("../imagens/one-piece-logo.png");
+    background-size: cover; /* para que o logo cubra toda area disponivel*/
+    height: 100px;
+    width: 230px;
+    margin-bottom: 35px;
+
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: rgba(0, 0, 0, 0.3); /* 0.3 esta colocando opacidade no background dos botões*/
+
+}
+
+.botoes .botao {
+    border: none;
+    background: #000000; /* mudei de background none para preto pois havia uma leve transparencia abaixo no botão */
+    cursor: pointer; /* Ponteiro do mouse vira uma mão ao passar por cima do botão*/ 
+    border-radius: 50%; 
+}
+
+.botoes .botao img{
+    border-radius: 50%;
+
+}
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #d9d9d9;
+   
+}
